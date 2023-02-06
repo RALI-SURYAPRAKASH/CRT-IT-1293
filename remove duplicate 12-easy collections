@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        String Dupli = scan.nextLine();
+        List<String> list = new ArrayList<String>();
+        for (int i=0;i<Dupli.length();i++){
+            if (!list.contains(Dupli.substring(i,i+1))){
+                list.add(Dupli.substring(i,i+1));
+            }
+        }
+        for (int i=0;i<list.size();i++){
+            System.out.print(list.get(i));
+        }
+
+    }
+}
